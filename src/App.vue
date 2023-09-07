@@ -1,12 +1,17 @@
 <template>
+  <HeaderBlock />
+  <ClientsBlock />
+  <ServicesBlock />
 </template>
 
 <script>
+import HeaderBlock from "./components/HeaderBlock";
+import ClientsBlock from "./components/ClientsBlock";
+import ServicesBlock from "./components/ServicesBlock";
 
 export default {
   name: "App",
-  components: {
-  },
+  components: { HeaderBlock, ClientsBlock, ServicesBlock },
 };
 </script>
 
@@ -15,8 +20,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

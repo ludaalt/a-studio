@@ -2,12 +2,12 @@
   <NavigationPanel />
   <div class="description-block">
     <div class="page-container title-block">
-      <h1>A Digital Product Agency</h1>
-      <p>
-        Leading digital agency with solid design and development expertise. We
+      <BlockTitle
+        title="A Digital Product Agency"
+        description="Leading digital agency with solid design and development expertise. We
         build readymade websites, mobile applications, and elaborate online
-        business services.
-      </p>
+        business services."
+      />
       <AppButton title="Contact Now" />
     </div>
     <picture>
@@ -17,12 +17,13 @@
 </template>
 
 <script>
+import BlockTitle from "./BlockTitle";
 import NavigationPanel from "./NavigationPanel";
 import AppButton from "./AppButton.vue";
 
 export default {
   name: "HeaderBlock",
-  components: { NavigationPanel, AppButton },
+  components: { BlockTitle, NavigationPanel, AppButton },
 };
 </script>
 
@@ -68,25 +69,11 @@ export default {
     object-fit: cover;
     width: 755px;
     height: 512px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   .title-block {
     padding: 125px 0;
-
-    h1 {
-      margin-bottom: 40px;
-      font-weight: 400;
-      font-size: 40px;
-      line-height: 49px;
-
-      color: #000000;
-    }
-
-    p {
-      margin-bottom: 33px;
-      max-width: 470px;
-      text-align: start;
-    }
   }
 }
 </style>
